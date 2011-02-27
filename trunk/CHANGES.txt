@@ -1,0 +1,80 @@
+
+ListNums Changes
+----------------
+
+2010-07-02 Mr. 하늘
+1.2.2 릴리즈
+
+autoHide (기본: true), autoLink (기본: true) 속성을 추가
+
+autoHide가 true면 해당 Tag Library가 필요할때만 생성된다.
+autoLink가 true면 해당 Tag Library의 링크가 필요할때만 연결된다.
+
+
+2010-06-18 Mr. 하늘
+1.2.1 릴리즈
+
+Tag Library들의 시작과 끝에 글을 써 넣을수 있도록 open, close 속성을 추가
+
+
+2010-05-03 Mr. 하늘
+1.2.0 릴리즈
+
+Tag Library 추가
+  l:firstpage 첫 페이지로 가기
+  l:lastpage 마지막 페이지로 가기
+
+
+2010-04-25 Mr. 하늘
+1.1.1 릴리즈
+
+넘버링 표현 방식이 바뀜 (현재 페이지 넘버가 중앙으로)
+
+
+2010-04-25 Mr. 하늘
+1.1.0 릴리즈
+
+ListNumsProvider
+메소드 추가:
+  serveListNums(ListNumsDTO listNums, int nowPage, int totalCount, int blockCount, int blockPage) 
+  serveListNums(ListNumsDTO listNums, int nowPage, int totalCount, int blockCount, int minBlockCount, int maxBlockCount, int blockPage, int minBlockPage, int maxBlockPage)
+  serveListNumsUsingCookie(ListNumsDTO listNums, javax.servlet.http.HttpServletRequest request, int nowPage, int totalCount, int blockCount, int minBlockCount, int maxBlockCount, int blockPage, int minBlockPage, int maxBlockPage)
+
+태그 라이브러리 추가: <%@ taglib prefix="l" uri="/listnums-tags"%>
+  l:prevpage
+  l:nextpage
+  l:numbering
+  l:prevblock
+  l:nextblock
+
+
+2010-04-12 Mr. 하늘
+모듈 생성.
+
+ListNumsDTO
+메소드:
+  getBlockCount() 
+  getBlockPage() 
+  getEndPage() 
+  getEndRowNum() 
+  getNowPage() 
+  getStartPage() 
+  getStartRowNum() 
+  getTotalCount() 
+  getTotalPage() 
+  setBlockCount(int blockCount) 
+  setBlockPage(int blockPage) 
+  setEndPage(int endPage) 
+  setEndRowNum(int endRowNum) 
+  setNowPage(int nowPage) 
+  setStartPage(int startPage)             
+  setStartRowNum(int startRowNum)           
+  setTotalCount(int totalCount)            
+  setTotalPage(int totalPage)  
+
+ListNumsProvider
+메소드:
+  createListNums(javax.servlet.http.HttpServletRequest request, int nowPage, int totalCount, int blockCount, int minBlockCount, int maxBlockCount, int blockPage, int minBlockPage, int maxBlockPage)
+  createListNums(int nowPage, int totalCount, int blockCount, int blockPage) 
+  createListNums(int nowPage, int totalCount, int blockCount, int minBlockCount, int maxBlockCount, int blockPage, int minBlockPage, int maxBlockPage) 
+
