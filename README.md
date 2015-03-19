@@ -2,7 +2,7 @@ ListNums
 ========
 리스트 넘버를 제공하는 모듈
 
-* 이 프로젝트는 Google Code에서 이전되었습니다.
+* *이 프로젝트는 Google Code로부터 이전되었습니다.*
 * ListNums 소개 - http://blog.mr.hanul.co/2011/02/listnums.html
 
 쿠키를 사용하여 리스트 넘버를 불러올 수도 있습니다.
